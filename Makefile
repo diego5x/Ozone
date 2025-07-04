@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -g
-TARGET = main
+TARGET = ozone
 SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
 
