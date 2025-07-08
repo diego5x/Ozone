@@ -1,7 +1,9 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -g
 TARGET = ozone
-SRCS = $(wildcard *.c)
+
+SRCS = $(wildcard src/*.c)
+
 OBJS = $(SRCS:.c=.o)
 
 all: $(TARGET)
@@ -9,7 +11,7 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^
 
-%.o: %.c
+src/%.o: src/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
